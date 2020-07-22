@@ -1,0 +1,21 @@
+
+-Question4 Load data into sql table
+
+LOAD DATA INFILE 'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\employee_test.csv'
+INTO TABLE employee_test
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+
+
+-Question5 designationwise count
+
+ select edesign,count(*)Total from employee_test group by edesign;
+
++-----------+-------+
+| edesign   | Total |
++-----------+-------+
+| testing   |     3 |
+| developer |     1 |
++-----------+-------+
+2 rows in set (0.00 sec)
